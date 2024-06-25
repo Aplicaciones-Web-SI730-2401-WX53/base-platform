@@ -14,6 +14,7 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
         <!-- MySQL Database Persistence related packages -->
         <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.2" />
         <!-- Audit Trails related packages -->
@@ -23,6 +24,10 @@
         <!-- OpenAPI Documentation related packages -->
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.6.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Operation\Interfaces\" />
     </ItemGroup>
 
 </Project>

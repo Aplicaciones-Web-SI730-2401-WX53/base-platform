@@ -1,3 +1,7 @@
+using BasePlatform.API.Operation.Application.Services.Commands;
+using BasePlatform.API.Operation.Domain.Repositories;
+using BasePlatform.API.Operation.Domain.Services.Comands;
+using BasePlatform.API.Operation.Infrastructure.Repositories;
 using BasePlatform.API.Shared.Domain.Repositories;
 using BasePlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using BasePlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories;
@@ -73,7 +77,8 @@ builder.Services.AddCors(options =>
 
 // Shared Bounded Context Injection Configuration
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+builder.Services.AddScoped<IGuardianCommandService, GuardinaCommandService>();
+builder.Services.AddScoped<IGuardianRepository, GuardianRepository>();
 
 
 var app = builder.Build();
